@@ -55,7 +55,8 @@ Add widget after table. Set id param of your table. Param ajax is optional.
             - desc
         language:
           url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
-        dom: Blfrtip
+        _dom: Blfrtip
+        dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
         buttons:
           - copy
           - csv
