@@ -44,4 +44,43 @@ class PluginDatatableDatatable_1_10_18{
     $element[] = wfDocument::createHtmlElement('script', "var datatable_$id; $(document).ready(function(){ datatable_$id = $('#$id').DataTable($json); });");
     wfDocument::renderElement($element);
   }
+  /**
+   * 
+   * @param array $rs Ajax data.
+   * @param array $field Restrict fields.
+   * @return json
+   */
+  public function set_table_data($rs, $field = array()){
+    /**
+     * 
+     */
+    $data = array();
+    /**
+     * 
+     */
+    foreach ($rs as $value) {
+      $row_data = new PluginWfArray($value);
+      $temp = array();
+      if(!sizeof($field)){
+        /**
+         * All data used because no $field is empty.
+         */
+        foreach ($row_data->get() as $v2) {
+          $temp[] = $v2;
+        }
+      }else{
+        /**
+         * Restrict to param $field.
+         */
+        foreach ($field as $v2) {
+          $temp[] = $row_data->get($v2);
+        }
+      }
+      $data[] = $temp;
+    }
+    /**
+     * 
+     */
+    return json_encode(array('data' => $data));
+  }
 }
