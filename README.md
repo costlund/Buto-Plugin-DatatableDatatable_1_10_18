@@ -62,6 +62,12 @@ Add widget after table. Set id param of your table. Param ajax is optional.
           - csv
           - excel
           - pdf
+        columnDefs:
+          -
+            targets: 
+             - 0
+            visible: false
+            searchable: false
 ```
 
 ## Ajax
@@ -70,8 +76,23 @@ When using param ajax.
 
 ```
 public function page_ajax_test(){
-  $data = array(array('John', 1), array('Jane', 2));
-  exit(json_encode(array('data' => $data)));
+  /**
+   * Including Datatable
+   */    
+  wfPlugin::includeonce('datatable/datatable_1_10_18');
+  $datatable = new PluginDatatableDatatable_1_10_18();
+  /**
+   * Data
+   */    
+  $data = array(array('id' => 1, 'name' => 'John'), array('id' => 2, 'name' => 'Jane'));
+  /**
+   * Render all data
+   */    
+  exit($datatable->set_table_data($data));
+  /**
+   * Render only name
+   */    
+  exit($datatable->set_table_data($data, array('name')));
 }
 ```
 Reload table.
@@ -118,4 +139,6 @@ Use dom param to modify element position.
 dom: "<'row'<'col-sm-6'l><'col-sm-6'f>><'row'<'col-sm-5'i><'col-sm-7'p>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>"
 ```
 
+## Hidden columns
 
+By using param columnDefs one could hide columns and also make them not searchable.
