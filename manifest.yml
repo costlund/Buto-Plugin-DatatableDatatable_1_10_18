@@ -1,5 +1,9 @@
-version: '1.1.0'
+version: '1.2.0'
 history:
+  '1.2.0':
+    date: '2020-01-29'
+    label: Export buttons
+    description: Make export buttons smaller.
   '1.1.0':
     date: '2020-01-29'
     label: Json data

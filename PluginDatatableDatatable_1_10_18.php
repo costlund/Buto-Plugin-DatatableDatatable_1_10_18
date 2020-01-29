@@ -30,6 +30,13 @@ class PluginDatatableDatatable_1_10_18{
     foreach ($script as $key => $value) {
       $element[] = wfDocument::createHtmlElement('script', null, array('src' => $web_dir.'/'.$value, 'type' => 'text/javascript'));
     }
+    /**
+     * Make export buttons smaller.
+     */
+    $element[] = wfDocument::createHtmlElement('style', ".dt-buttons button{font-size:10px}");
+    /**
+     * 
+     */
     wfDocument::renderElement($element);
   }
   public static function widget_run($data){
