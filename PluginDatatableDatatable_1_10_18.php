@@ -54,27 +54,18 @@ class PluginDatatableDatatable_1_10_18{
     /**
      * 
      */
-    $data = array();
+    if(!sizeof($field)){
+      return json_encode(array('data' => $rs));
+    }
     /**
      * 
      */
+    $data = array();
     foreach ($rs as $value) {
       $row_data = new PluginWfArray($value);
       $temp = array();
-      if(!sizeof($field)){
-        /**
-         * All data used because no $field is empty.
-         */
-        foreach ($row_data->get() as $v2) {
-          $temp[] = $v2;
-        }
-      }else{
-        /**
-         * Restrict to param $field.
-         */
-        foreach ($field as $v2) {
-          $temp[] = $row_data->get($v2);
-        }
+      foreach ($field as $v2) {
+        $temp[$v2] = $row_data->get($v2);
       }
       $data[] = $temp;
     }

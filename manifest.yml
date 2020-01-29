@@ -1,6 +1,10 @@
-version: '1.0'
+version: '1.1.0'
 history:
-  '1.0':
+  '1.1.0':
+    date: '2020-01-29'
+    label: Json data
+    description: Improved method to handel json data.
+  '1.0.0':
     date: '2019-03-09'
     description: 'Manifest created.'
 plugin: {  }
