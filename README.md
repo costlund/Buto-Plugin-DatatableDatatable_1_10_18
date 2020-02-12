@@ -58,10 +58,14 @@ Add widget after table. Set id param of your table. Param ajax is optional.
         _dom: Blfrtip
         dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
         buttons:
-          - copy
+          -
+             extend: excel
+             title: My title
+          -
+             extend: pdf
+             title: My title
           - csv
-          - excel
-          - pdf
+          - copy
         columnDefs:
           -
             targets: 
