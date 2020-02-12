@@ -2,14 +2,15 @@ version: '1.2.0'
 history:
   '1.2.0':
     date: '2020-01-29'
-    label: Export buttons
+    title: Export buttons
     description: Make export buttons smaller.
   '1.1.0':
     date: '2020-01-29'
-    label: Json data
+    title: Json data
     description: Improved method to handel json data.
   '1.0.0':
     date: '2019-03-09'
+    title: Manifest
     description: 'Manifest created.'
 plugin: {  }
 sys:
