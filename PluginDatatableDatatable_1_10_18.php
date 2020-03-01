@@ -62,7 +62,7 @@ class PluginDatatableDatatable_1_10_18{
      * 
      */
     if(!sizeof($field)){
-      return json_encode(array('data' => $rs));
+      return json_encode(array('data' => $rs, 'client' => wfUser::hasRole('client')));
     }
     /**
      * 
@@ -79,6 +79,6 @@ class PluginDatatableDatatable_1_10_18{
     /**
      * 
      */
-    return json_encode(array('data' => $data));
+    return json_encode(array('data' => $data, 'client' => wfUser::hasRole('client')));
   }
 }

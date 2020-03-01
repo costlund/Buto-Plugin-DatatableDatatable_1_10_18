@@ -1,5 +1,9 @@
-version: '1.2.0'
+version: '1.3.0'
 history:
+  '1.3.0':
+    date: '2020-03-01'
+    title: Client in method set_table_data
+    description: Return param client to verify if user has sign in.
   '1.2.0':
     date: '2020-01-29'
     title: Export buttons
