@@ -45,9 +45,18 @@ class PluginDatatableDatatable_1_10_18{
     if($json){
       $json = json_encode($json);
     }else{
-      $json = array();
+      $json = json_encode(array());
     }
     $element = array();
+    /**
+     * Focus on search field.
+     */
+    $json = substr($json, 0, strlen($json)-1);
+    $init_script = "if(document.getElementById('".$id."_filter') && document.getElementById('".$id."_filter').getElementsByTagName('input')){  document.getElementById('".$id."_filter').getElementsByTagName('input')[0].focus();   };";
+    $json .= ',"initComplete": function(settings, json) {'.$init_script.'} }';
+    /**
+     * 
+     */
     $element[] = wfDocument::createHtmlElement('script', "var datatable_$id; $(document).ready(function(){ datatable_$id = $('#$id').DataTable($json); });");
     wfDocument::renderElement($element);
   }
