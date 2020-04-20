@@ -146,3 +146,15 @@ dom: "<'row'<'col-sm-6'l><'col-sm-6'f>><'row'<'col-sm-5'i><'col-sm-7'p>><'row'<'
 ## Hidden columns
 
 By using param columnDefs one could hide columns and also make them not searchable.
+
+
+## Responsive table
+
+Put table in div element with class table-responsive.
+
+```
+type: div
+attribute:
+  class: table-responsive
+innerHTML: ...
+```

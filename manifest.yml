@@ -1,5 +1,9 @@
-version: '1.4.0'
+version: '1.4.1'
 history:
+  '1.4.1':
+    date: '2020-04-20'
+    title: Readme
+    description: How to make table responsive.
   '1.4.0':
     date: '2020-03-11'
     title: Search field focus
