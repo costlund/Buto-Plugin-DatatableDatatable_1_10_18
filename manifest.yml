@@ -1,5 +1,9 @@
-version: '1.4.1'
+version: '1.4.2'
 history:
+  '1.4.2':
+    date: '2020-10-27'
+    title: 'Map file'
+    description: 'Remove inclusion of pdfmake.min.js.map.'
   '1.4.1':
     date: '2020-04-20'
     title: Readme
