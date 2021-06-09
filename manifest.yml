@@ -1,5 +1,9 @@
-version: '1.4.2'
+version: '1.4.3'
 history:
+  '1.4.3':
+    date: '2021-06-09'
+    title: 'Readme'
+    description: 'Add Javascript example to readme.'
   '1.4.2':
     date: '2020-10-27'
     title: 'Map file'
