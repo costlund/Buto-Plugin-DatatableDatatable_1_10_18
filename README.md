@@ -224,3 +224,8 @@ $(document).ready(function ()
 });
 ```
 
+## I18N
+Pic up I18N content.
+```
+https://datatables.net/plug-ins/i18n/
+```

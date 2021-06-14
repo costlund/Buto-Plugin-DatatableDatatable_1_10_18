@@ -1,5 +1,9 @@
-version: '1.4.3'
+version: '1.4.4'
 history:
+  '1.4.4':
+    date: '2021-06-14'
+    title: 'I18N'
+    description: 'Add I18N files form sv.json (copy of Swedish.json), en.json, lt.json.'
   '1.4.3':
     date: '2021-06-09'
     title: 'Readme'
