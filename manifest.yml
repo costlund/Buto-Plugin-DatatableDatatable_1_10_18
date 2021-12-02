@@ -1,5 +1,9 @@
-version: '1.4.5'
+version: '1.4.6'
 history:
+  '1.4.6':
+    date: '2021-12-02'
+    title: 'Readme'
+    description: 'Readme improvement about changing row data.'
   '1.4.5':
     date: '2021-08-19'
     title: 'Processing'

@@ -86,6 +86,17 @@ Transform table to a Datatable with a widget.
             searchable: false
 ```
 
+#### Object
+An object is created named depending on id parameter. 
+One could use this to reload, get/set data in rows.
+```
+      id: table_member
+```
+Object name.
+```
+datatable_table_member
+```
+
 #### Ajax
 When using param ajax. This example show how a page should be set. Copy code and make changes.
 ```
@@ -123,6 +134,16 @@ $('#table_member tbody').on( 'click', 'tr', function () {
 } );
 ```
 
+#### Update
+Update row.
+In this example we asume row data has parameter name.
+```
+var index = datatable_table_member.row(this).index();
+var data = datatable_table_member.row(this).data();
+data.name = 'James';
+datatable_table_member.row(index).data( data ).draw();
+```
+
 #### Custom paging
 One could set custom page length options.
 ```
@@ -156,6 +177,7 @@ By using param columnDefs one could hide columns and also make them not searchab
 This example first add a table and then handle Datatable with Javascript only.
 It will initialise Datatable twice. 
 First to only make it look like a Datatable and second to add data and declare columns.
+
 ### Table
 A simple table.
 ```
@@ -180,6 +202,7 @@ data:
           - 0
           - asc
 ```
+
 ### Javascript
 One should use some Ajax request to pic up some data.
 But in this example we hard coded the data.
