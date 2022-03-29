@@ -1,5 +1,9 @@
-version: '1.4.6'
+version: '1.4.7'
 history:
+  '1.4.7':
+    date: '2022-03-29'
+    title: 'Readme'
+    description: 'Readme improvement about how to reload data.'
   '1.4.6':
     date: '2021-12-02'
     title: 'Readme'

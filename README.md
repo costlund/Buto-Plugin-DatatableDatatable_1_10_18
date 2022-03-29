@@ -125,6 +125,9 @@ Reload table.
 ```
 var table = $('#table_member').DataTable();table.ajax.reload();
 ```
+```
+$('#table_member').DataTable().ajax.reload();
+```
 
 #### Click
 Row click.
