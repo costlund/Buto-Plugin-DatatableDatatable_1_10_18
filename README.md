@@ -133,6 +133,8 @@ $('#table_member').DataTable().ajax.reload();
 Row click.
 ```
 $('#table_member tbody').on( 'click', 'tr', function () {
+    console.log( this ); //Set this to a variable to be able to remove (_this_).
+    console.log( datatable_table_member.row( this ).index() );
     console.log( datatable_table_member.row( this ).data() );
 } );
 ```
@@ -145,6 +147,12 @@ var index = datatable_table_member.row(this).index();
 var data = datatable_table_member.row(this).data();
 data.name = 'James';
 datatable_table_member.row(index).data( data ).draw();
+```
+
+#### Delete
+Delete row.
+```
+datatable_table_member.row(_this_).remove().draw();
 ```
 
 #### Custom paging
