@@ -45,9 +45,18 @@ class PluginDatatableDatatable_1_10_18{
   }
   public static function widget_run($data){
     $id = wfArray::get($data, 'data/id');
-    $json = wfArray::get($data, 'data/json');
-    if($json){
-      $json = json_encode($json);
+    $data_json = new PluginWfArray(wfArray::get($data, 'data/json'));
+    /**
+     * 
+     */
+    if(!$data_json->get('language/url')){
+      $data_json->set('language/url', '/plugin/datatable/datatable_1_10_18/i18n/'.wfI18n::getLanguage().'.json');
+    }
+    /**
+     * 
+     */
+    if($data_json->get()){
+      $json = json_encode($data_json->get());
     }else{
       $json = json_encode(array());
     }

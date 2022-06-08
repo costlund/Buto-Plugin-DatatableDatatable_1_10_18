@@ -1,5 +1,9 @@
-version: '1.4.8'
+version: '1.5.0'
 history:
+  '1.5.0':
+    date: '2022-06-08'
+    title: 'Language'
+    description: 'Set json param language/url if not set.'
   '1.4.8':
     date: '2021-12-02'
     title: 'Readme'
