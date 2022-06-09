@@ -65,8 +65,6 @@ Transform table to a Datatable with a widget.
           -
             - 0
             - desc
-        language:
-          url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
         _dom: Blfrtip
         dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
         buttons:
@@ -84,6 +82,12 @@ Transform table to a Datatable with a widget.
              - 0
             visible: false
             searchable: false
+```
+One could set translation file. But this is set automatic to current language.
+```
+    data:
+        language:
+          url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
 ```
 
 #### Object
