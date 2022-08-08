@@ -1,5 +1,9 @@
-version: '1.5.0'
+version: '1.5.1'
 history:
+  '1.5.1':
+    date: '2022-08-08'
+    title: 'Readme'
+    description: 'Readme about reload ajax url.'
   '1.5.0':
     date: '2022-06-08'
     title: 'Language'

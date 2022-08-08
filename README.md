@@ -133,6 +133,12 @@ var table = $('#table_member').DataTable();table.ajax.reload();
 $('#table_member').DataTable().ajax.reload();
 ```
 
+#### Change url and load
+Change ajax url and load table again.
+```
+$('#table_member').DataTable().ajax.url('/path/ajax_test?my_param=yes').load();
+```
+
 #### Click
 Row click.
 ```
