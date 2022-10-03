@@ -49,7 +49,7 @@ class PluginDatatableDatatable_1_10_18{
     /**
      * 
      */
-    if(!$data_json->get('language/url')){
+    if(!$data_json->get('language/url') && wfI18n::getLanguage()){
       $data_json->set('language/url', '/plugin/datatable/datatable_1_10_18/i18n/'.wfI18n::getLanguage().'.json');
     }
     /**
