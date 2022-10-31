@@ -165,6 +165,22 @@ Delete row.
 datatable_table_member.row(_this_).remove().draw();
 ```
 
+#### Get rows
+Every row.
+```
+table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+  var data = this.data();
+  console.log(data);
+} );
+```
+Rows where filter applied.
+```
+table.rows( { filter: 'applied' } ).every( function () {
+  var data = this.data();
+  console.log(data);
+});
+```
+
 #### Custom paging
 One could set custom page length options.
 ```

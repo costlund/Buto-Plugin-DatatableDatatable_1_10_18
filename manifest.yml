@@ -1,5 +1,9 @@
-version: 1.5.2
+version: 1.5.3
 history:
+  1.5.3:
+    date: '2022-10-31'
+    title: 'Readme'
+    description: 'Readme how to get rows data.'
   1.5.2:
     date: '2022-10-03'
     title: 'Language'
