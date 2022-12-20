@@ -90,6 +90,12 @@ class PluginDatatableDatatable_1_10_18{
     /**
      * 
      */
+    if(!$rs){
+      $rs = array();
+    }
+    /**
+     * 
+     */
     if(!sizeof($field)){
       return json_encode(array('data' => $rs, 'client' => wfUser::hasRole('client')));
     }

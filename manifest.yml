@@ -1,5 +1,9 @@
-version: 1.5.3
+version: 1.5.4
 history:
+  1.5.4:
+    date: '2022-12-20'
+    title: 'Empty data'
+    description: 'Handle empty data in method .set_table_data.'
   1.5.3:
     date: '2022-10-31'
     title: 'Readme'
