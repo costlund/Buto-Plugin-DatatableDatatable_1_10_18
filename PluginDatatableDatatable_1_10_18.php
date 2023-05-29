@@ -35,10 +35,6 @@ class PluginDatatableDatatable_1_10_18{
      */
     $element[] = wfDocument::createHtmlElement('style', ".dt-buttons button{font-size:10px}");
     /**
-     * Position processing card just below the table.
-     */
-    $element[] = wfDocument::createHtmlElement('style', ".dataTables_processing{top:1% !important;}");
-    /**
      * 
      */
     wfDocument::renderElement($element);
