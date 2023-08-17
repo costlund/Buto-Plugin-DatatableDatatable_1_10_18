@@ -60,7 +60,7 @@ class PluginDatatableDatatable_1_10_18{
     /**
      * Focus on search field.
      */
-    $json = substr($json, 0, strlen($json)-1);
+    $json = wfPhpfunc::substr($json, 0, wfPhpfunc::strlen($json)-1);
     $init_script = "if(document.getElementById('".$id."_filter') && document.getElementById('".$id."_filter').getElementsByTagName('input')){  document.getElementById('".$id."_filter').getElementsByTagName('input')[0].focus();   };";
     $json .= ',"initComplete": function(settings, json) {'.$init_script.'} }';
     /**

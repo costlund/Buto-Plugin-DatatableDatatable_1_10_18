@@ -1,8 +1,12 @@
-version: 1.5.5
+version: 1.6.0
 history:
+  1.6.0:
+    date: '2023-08-17'
+    title: 'PHP 8.2'
+    description: 'Changes according to PHP version 8.2.'
   1.5.5:
     date: '2023-05-29'
-    title: 'Processing'
+    title: Processing
     description: 'Move style to put processing card at top of page.'
   1.5.4:
     date: '2022-12-20'
@@ -10,43 +14,43 @@ history:
     description: 'Handle empty data in method .set_table_data.'
   1.5.3:
     date: '2022-10-31'
-    title: 'Readme'
+    title: Readme
     description: 'Readme how to get rows data.'
   1.5.2:
     date: '2022-10-03'
-    title: 'Language'
+    title: Language
     description: 'Does not trying to include language json if wfI18n::getLanguage() not set.'
   1.5.1:
     date: '2022-08-08'
-    title: 'Readme'
+    title: Readme
     description: 'Readme about reload ajax url.'
   1.5.0:
     date: '2022-06-08'
-    title: 'Language'
+    title: Language
     description: 'Set json param language/url if not set.'
   1.4.8:
     date: '2021-12-02'
-    title: 'Readme'
+    title: Readme
     description: 'Readme improvement.'
   1.4.7:
     date: '2022-03-29'
-    title: 'Readme'
+    title: Readme
     description: 'Readme improvement about how to reload data.'
   1.4.6:
     date: '2021-12-02'
-    title: 'Readme'
+    title: Readme
     description: 'Readme improvement about changing row data.'
   1.4.5:
     date: '2021-08-19'
-    title: 'Processing'
+    title: Processing
     description: 'Change position of processing card at the top of the table. Add class bg-info.'
   1.4.4:
     date: '2021-06-14'
-    title: 'I18N'
+    title: I18N
     description: 'Add I18N files form sv.json (copy of Swedish.json), en.json, lt.json.'
   1.4.3:
     date: '2021-06-09'
-    title: 'Readme'
+    title: Readme
     description: 'Add Javascript example to readme.'
   1.4.2:
     date: '2020-10-27'
@@ -55,23 +59,23 @@ history:
   1.4.1:
     date: '2020-04-20'
     title: Readme
-    description: How to make table responsive.
+    description: 'How to make table responsive.'
   1.4.0:
     date: '2020-03-11'
-    title: Search field focus
-    description: Focus on search field.
+    title: 'Search field focus'
+    description: 'Focus on search field.'
   1.3.0:
     date: '2020-03-01'
-    title: Client in method set_table_data
-    description: Return param client to verify if user has sign in.
+    title: 'Client in method set_table_data'
+    description: 'Return param client to verify if user has sign in.'
   1.2.0:
     date: '2020-01-29'
-    title: Export buttons
-    description: Make export buttons smaller.
+    title: 'Export buttons'
+    description: 'Make export buttons smaller.'
   1.1.0:
     date: '2020-01-29'
-    title: Json data
-    description: Improved method to handel json data.
+    title: 'Json data'
+    description: 'Improved method to handel json data.'
   1.0.0:
     date: '2019-03-09'
     title: Manifest
@@ -84,6 +88,6 @@ sys:
       - '1.0'
 php:
   - '7.2'
-author: Claes Östlund
-links:
+author: 'Claes Östlund'
+links: null
 description: ''
