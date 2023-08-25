@@ -1,5 +1,9 @@
-version: 1.6.0
+version: 1.6.1
 history:
+  1.6.1:
+    date: '2023-08-25'
+    title: 'Readme'
+    description: 'Readme improvement about ajax request.'
   1.6.0:
     date: '2023-08-17'
     title: 'PHP 8.2'

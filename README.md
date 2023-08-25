@@ -102,28 +102,21 @@ datatable_table_member
 ```
 
 #### Ajax
-When using param ajax. This example show how a page should be set. Copy code and make changes.
+Use this in a page request.
 ```
-public function page_ajax_test(){
-  /**
-   * Including Datatable
-   */    
-  wfPlugin::includeonce('datatable/datatable_1_10_18');
-  $datatable = new PluginDatatableDatatable_1_10_18();
-  /**
-   * Data
-   */    
-  $data = array(array('id' => 1, 'name' => 'John'), array('id' => 2, 'name' => 'Jane'));
-  /**
-   * Render all data
-   */    
-  exit($datatable->set_table_data($data));
-  /**
-   * Render only name
-   */    
-  exit($datatable->set_table_data($data, array('name')));
-}
+wfPlugin::includeonce('datatable/datatable_1_10_18');
+$datatable = new PluginDatatableDatatable_1_10_18();
+exit($datatable->set_table_data($data));
 ```
+Data example.
+```
+$data = array(array('id' => 1, 'name' => 'John'), array('id' => 2, 'name' => 'Jane'));
+```
+Render only name.
+```
+exit($datatable->set_table_data($data, array('name')));
+```
+
 #### Reload
 Reload table.
 ```
