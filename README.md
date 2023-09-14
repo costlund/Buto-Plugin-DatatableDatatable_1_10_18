@@ -61,6 +61,7 @@ Transform table to a Datatable with a widget.
         ordering: true
         info: true
         searching: true
+        searching_focus: false
         order:
           -
             - 0

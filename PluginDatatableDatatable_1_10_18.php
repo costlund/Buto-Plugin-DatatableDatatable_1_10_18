@@ -43,6 +43,12 @@ class PluginDatatableDatatable_1_10_18{
     $id = wfArray::get($data, 'data/id');
     $data_json = new PluginWfArray(wfArray::get($data, 'data/json'));
     /**
+     * searching_focus
+     */
+    if(!$data_json->get('searching_focus')){
+      $data_json->set('searching_focus', false);
+    }
+    /**
      * 
      */
     if(!$data_json->get('language/url') && wfI18n::getLanguage()){
@@ -60,9 +66,11 @@ class PluginDatatableDatatable_1_10_18{
     /**
      * Focus on search field.
      */
-    $json = wfPhpfunc::substr($json, 0, wfPhpfunc::strlen($json)-1);
-    $init_script = "if(document.getElementById('".$id."_filter') && document.getElementById('".$id."_filter').getElementsByTagName('input')){  document.getElementById('".$id."_filter').getElementsByTagName('input')[0].focus();   };";
-    $json .= ',"initComplete": function(settings, json) {'.$init_script.'} }';
+    if($data_json->get('searching_focus')){
+      $json = wfPhpfunc::substr($json, 0, wfPhpfunc::strlen($json)-1);
+      $init_script = "if(document.getElementById('".$id."_filter') && document.getElementById('".$id."_filter').getElementsByTagName('input')){  document.getElementById('".$id."_filter').getElementsByTagName('input')[0].focus();   };";
+      $json .= ',"initComplete": function(settings, json) {'.$init_script.'} }';
+    }
     /**
      * 
      */

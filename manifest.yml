@@ -1,5 +1,9 @@
-version: 1.6.1
+version: 1.6.2
 history:
+  1.6.2:
+    date: '2023-09-14'
+    title: 'Searching focus'
+    description: 'Add json param searching_focus.'
   1.6.1:
     date: '2023-08-25'
     title: 'Readme'
