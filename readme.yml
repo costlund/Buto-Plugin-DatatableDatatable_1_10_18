@@ -1,0 +1,236 @@
+readme:
+  name: Buto-Plugin-DatatableDatatable_1_10_18
+  description: |
+    Build for Bootstrap 4 usage.
+    Add sort, paging and search methods to a html table via Javascript. Also export to csv, excel, pdf.
+  item:
+    -
+      name: Widgets
+      item:
+        -
+          name: include
+          description: |
+            Include widget in head section.
+            ```
+            type: widget
+            data:
+              plugin: datatable/datatable_1_10_18
+              method: include
+            ```
+        -
+          name: run
+          description: |
+            Transform table to a Datatable with a widget.
+            ```
+            type: widget
+            data:
+              plugin: datatable/datatable_1_10_18
+              method: run
+              data:
+                id: table_member
+                json:
+                  ajax: /path/ajax_test
+                  paging: true
+                  ordering: true
+                  info: true
+                  searching: true
+                  searching_focus: false
+                  order:
+                    -
+                      - 0
+                      - desc
+                  _dom: Blfrtip
+                  dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>><'row'<'col-sm-12 col-md-6'B>>"
+                  buttons:
+                    -
+                      extend: excel
+                      title: My title
+                    -
+                      extend: pdf
+                      title: My title
+                    - csv
+                    - copy
+                  columnDefs:
+                    -
+                      targets: 
+                      - 0
+                      visible: false
+                      searchable: false
+            ```
+            One could set translation file. But this is set automatic to current language.
+            ```
+                  language:
+                    url: /plugin/datatable/datatable_1_10_18/i18n/Swedish.json
+            ```
+
+
+
+            Responsive table.
+
+            Put table in div element with class table-responsive.
+            ```
+            type: div
+            attribute:
+              class: table-responsive
+            innerHTML: ...
+            ```
+
+            Object.
+
+            An object is created named depending on id parameter. 
+            One could use this to reload, get/set data in rows.
+            ```
+                id: table_member
+            ```
+            Object name.
+            ```
+            datatable_table_member
+            ```
+    -
+      name: Usage
+      item:
+        -
+          name: Ajax
+          description: |
+            Use this in a page request.
+            ```
+            wfPlugin::includeonce('datatable/datatable_1_10_18');
+            $datatable = new PluginDatatableDatatable_1_10_18();
+            exit($datatable->set_table_data($data));
+            ```
+            Data example.
+            ```
+            $data = array(array('id' => 1, 'name' => 'John'), array('id' => 2, 'name' => 'Jane'));
+            ```
+            Render only name.
+            ```
+            exit($datatable->set_table_data($data, array('name')));
+            ```
+        -
+          name: Reload
+          description: |
+            Reload table.
+            ```
+            var table = $('#table_member').DataTable();table.ajax.reload();
+            ```
+            ```
+            $('#table_member').DataTable().ajax.reload();
+            ```
+        -
+          name: Change url and load
+          description: |
+            Change ajax url and load table again.
+            ```
+            $('#table_member').DataTable().ajax.url('/path/ajax_test?my_param=yes').load();
+            ```
+        -
+          name: Click
+          description: |
+            Row click.
+            ```
+            $('#table_member tbody').on( 'click', 'tr', function () {
+                console.log( this ); //Set this to a variable to be able to remove (_this_).
+                console.log( datatable_table_member.row( this ).index() );
+                console.log( datatable_table_member.row( this ).data() );
+            } );
+            ```
+        -
+          name: Update
+          description: |
+            Update row.
+            In this example we asume row data has parameter name.
+            ```
+            var index = datatable_table_member.row(this).index();
+            var data = datatable_table_member.row(this).data();
+            data.name = 'James';
+            datatable_table_member.row(index).data( data ).draw();
+            ```
+        -
+          name: Delete
+          description: |
+            Delete row.
+            ```
+            datatable_table_member.row(_this_).remove().draw();
+            ```
+        -
+          name: Get rows
+          description: |
+            Every row.
+            ```
+            table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+              var data = this.data();
+              console.log(data);
+            } );
+            ```
+            Rows where filter applied.
+            ```
+            table.rows( { filter: 'applied' } ).every( function () {
+              var data = this.data();
+              console.log(data);
+            });
+            ```
+        -
+          name: Custom paging
+          description: |
+            One could set custom page length options.
+            ```
+            lengthMenu:
+              -
+                - 10
+                - 25
+                - 50
+                - 100
+                - 500
+                - '-1'
+              -
+                - 10
+                - 25
+                - 50
+                - 100
+                - 500
+                - All
+            ```
+        -
+          name: Dom
+          description: |
+            Use dom param to modify element position.
+            ```
+            dom: "<'row'<'col-sm-6'l><'col-sm-6'f>><'row'<'col-sm-5'i><'col-sm-7'p>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>"
+            ```
+        -
+          name: Hidden columns
+          description: |
+            By using param columnDefs one could hide columns and also make them not searchable.
+        -
+          name: Hide table if empty
+          description: |
+            By using order event one could run a method to hide table if empty.
+            ```
+            $( document ).ready(function() {
+              $('#table_member')
+                  .on('order.dt', () =>  handle_table_member() )
+                  ;
+            });
+            function handle_table_member(){
+              if(datatable_table_member.rows().count()==0){
+                document.getElementById('table_member_wrapper').parentNode.style.display='none';
+              }
+            }
+            ```
+    -
+      name: I18N
+      item:
+        -
+          name: File for translation
+          description: |
+            Pic up I18N content.
+            ```
+            https://datatables.net/plug-ins/i18n/
+            ```
+    -
+      name: Plugin usage
+      item:
+        -
+          name: wf/table
+          description: |
+            Concider use this plugin. It will build your table and implement this plugin.

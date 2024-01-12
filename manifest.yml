@@ -1,5 +1,9 @@
-version: 1.6.2
+version: 1.6.3
 history:
+  1.6.3:
+    date: '2024-01-12'
+    title: 'Readme'
+    description: 'Readme improvement.'
   1.6.2:
     date: '2023-09-14'
     title: 'Searching focus'
